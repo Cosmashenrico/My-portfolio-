@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>dynamic greeting</title>
+        <script>
+            function getGreeting(){
+                const currentTime=new Date();
+                const currentHour=currentTime.getHours();
+                let greeting;
+                if(currentHour<12){
+                    greeting="good morning buddy";
+                }
+                else if(currentHour<18){
+                    greeting="good afternoon";
+                }
+                else{
+                    greeting="good evening"
+                }
+                return greeting;
+            }
+            function displayGreeting(){
+                const greeting=getGreeting();
+                document.getElementById("greeting").innerHTML=greeting;
+            }
+        </script>
+    </head>
+    <body onload="displayGreeting">
+        <h1 id="greeting"></h1>
+        </body>
+</html>

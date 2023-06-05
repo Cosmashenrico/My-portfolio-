@@ -1,12 +1,57 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
     <head>
         <title> MY HOMEPAGE</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <style>
+        *
+         {
+    padding: 0;
+    margin: 0;
+ }
+body
+{
+    background-image: url(fra.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.menu-bar
+{
+    background:rgb(0,100,0);
+    text-align:left ;
+} 
+.menu-bar ul
+{
+   display:inline-flex;
+   list-style: none;
+   color: #fff;
+}
+.menu-bar ul li
+{
+    width: 120px;
+    margin: 20px;
+    padding: 150x; 
+}
+.menu-bar ul li a
+{
+    text-decoration: none;
+    color: #fff;
+}
+active,.menu-bar ul li a hover
+{
+background: #2bab0d;
+border-radius: 3px;
+}
+</style>
       
        
     </head>
     <body>
+    <label id="greetings">
+    </label>    
+
         <script src="javascript.js"defer></script>
  <header>
       <div class="menu-bar">     
@@ -19,12 +64,22 @@
         </ul>
     </div>
  </header>
- <footer>
-  <p>  @2023 cosmas</p>  
- </footer>
+
     
    
 
         
     </body>
+    <script>
+        var myDate= new Date();
+        var hrs= myDate.getHours();
+        var greet;
+        if(hrs<12)
+        greet ='good morning'
+        else if(hrs>=12 && hrs <=17)
+        greet = 'good afternoon' 
+        else if (hrs>=17 && hrs <=24)
+        greet = 'good evening'
+        document.getElementById('greetings').innerHTML=greet+ ' and welcome to my website';
+        </script>
 </html>
