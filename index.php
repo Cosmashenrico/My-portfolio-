@@ -1,3 +1,7 @@
+<?php
+include_once 'insert.php';
+
+?>
  <!DOCTYPE html>
 <html>
     <head>
@@ -60,16 +64,7 @@ border-radius: 3px;
     </head>
     <body>
         
-       <?php
-//create connection
-$conn= new mysqli( "localhost", "root", "", "cosmas");
-//check connection
-if(!$conn){
-    die("error". mysqli_connect_error());
-} 
-else
-echo "connected successfully";
-?>
+    
 
 
     <label id="greetings">
@@ -80,10 +75,10 @@ echo "connected successfully";
       <div class="menu-bar">     
         <ul> 
           <li> <a href="home">home </a></li>
-           <li><a href="intro.html">Introduction</a></li>
-           <li><a href="skills.html">skills</a></li>
-           <li><a href="MYWEBSITE.HTML">details</a></li>
-           <li><a href="MYWEBSITE.HTML">contacts</a></li>
+           <li><a href="intro.php">Introduction</a></li>
+           <li><a href="skills.php">skills</a></li>
+           <li><a href="myform.php">details</a></li>
+           <li><a href="MYWEBSITE.php">contacts</a></li>
         </ul>
     </div>
  </header>
@@ -92,7 +87,9 @@ echo "connected successfully";
 
     
    
-
+<footer>
+<a href="https://www.facebook.com/cosmas.henrico.5">facebook</a>
+</footer>
         
     </body>
     <script>
@@ -100,12 +97,12 @@ echo "connected successfully";
         var hrs= myDate.getHours();
         var greet;
         if(hrs<12)
-        greet ='good morning'
+        greet ='Good morning'
         else if(hrs>=12 && hrs <=17)
-        greet = 'good afternoon' 
+        greet = 'Good afternoon' 
         else if (hrs>=17 && hrs <=24)
-        greet = 'good evening'
-        document.getElementById('greetings').innerHTML=greet+ ' and welcome to my website';
+        greet = 'Good evening'
+        document.getElementById('greetings').innerHTML=greet+ ' and Welcome To My Website';
         
         </script>
       

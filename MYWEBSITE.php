@@ -1,4 +1,8 @@
 
+<?php
+include_once 'insert.php';
+
+?>
 <!DOCTYPE html>
 <html>
  <head> 
@@ -14,16 +18,7 @@
     <title> REGISTRATION FORM </title> 
  </head>
  <body>
-<?php
-//create connection
-$conn= new mysqli( "localhost", "root", "", "cosmas");
-//check connection
-if(!$conn){
-    die("error". mysqli_connect_error());
-} 
-else
-echo "connected successfully";
-?>
+
 
    <a href="index.html"  > <button>home</button></a>
          
